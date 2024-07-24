@@ -1,0 +1,26 @@
+---
+const stacks = {
+  Essentials: ["HTML5", "JavaScript", "Tailwind CSS", "CSS", "GitHub", "Storybook", "Sass"],
+  Frontend: ["TypeScript", "React", "Next.js", "GraphQL", "Kink", "Redux", "React Query"],
+  Backend: ["Node.js", "Laravel", "PHP", "PostgreSQL", "MySQL", "MongoDB", "Firebase"],
+  Testing: ["Jest"],
+  DevOps: ["Docker"],
+  Tools: ["VSCode", "Figma", "Vite", "Postman", "Git"],
+};
+---
+
+<div class="mt-12 text-custom-text font-custom-font">
+  <h2 class="text-3xl font-bold">Stacks</h2>
+  {Object.entries(stacks).map(([category, items]) => (
+    <div class="mt-8">
+      <h3 class="text-2xl font-semibold">{category}</h3>
+      <div class="mt-2 flex flex-wrap">
+        {items.map((item, idx) => (
+          <span class="bg-gray-800 text-white px-2 py-1 rounded-full text-sm mr-2 mb-2">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>

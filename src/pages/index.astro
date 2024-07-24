@@ -1,0 +1,19 @@
+---
+import MySiteLayout from '@/layouts/main.astro';
+
+import Profile from '@/components/profile.astro';
+import Experience from '@/components/experience.astro';
+import Stacks from '@/components/stacks.astro';
+---
+
+<MySiteLayout title="Hola">
+  <div class="container mx-auto p-6 flex flex-col md:flex-row">
+    <div class="md:w-4/12 md:fixed md:top-0 md:left-0 h-full p-6 bg-custom-light-gray">
+      <Profile />
+    </div>
+    <div class="md:w-8/12 md:ml-auto p-6">
+      <Experience />
+      <Stacks />
+    </div>
+  </div>
+</MySiteLayout>
